@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JobTrack - Job Application Tracker</title>
+
+    <link rel="stylesheet" href="JobTrack.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>JobTrack</h1>
+            <p>Track your jobs and internship applications</p>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Dashboard -->
+      <section class="dashboard">
+
+    <div class="card">
+        <h3>Total Applications</h3>
+        <p id="totalApplications">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Interviews</h3>
+        <p id="interviews">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Selected</h3>
+        <p id="selected">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Rejected</h3>
+        <p id="rejected">0</p>
+    </div>
+
+   <div class="card">
+    <h3>Success Rate</h3>
+
+    <p id="successRate">0%</p>
+
+    <div class="progress-bar">
+        <div id="successProgress"></div>
+    </div>
+</div>
+
+</section>
+
+        <!-- Add Application -->
+        <section class="application-form">
+
+            <h2>Add Job Application</h2>
+
+            <form id="jobForm">
+
+                <input
+                    type="text"
+                    id="company"
+                    placeholder="Company Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="role"
+                    placeholder="Job Role"
+                    required
+                >
+
+                <input
+                    type="date"
+                    id="date"
+                    required
+                >
+
+                <select id="status" required>
+                    <option value="">Select Status</option>
+                    <option value="Applied">Applied</option>
+                    <option value="Interview">Interview</option>
+                    <option value="Selected">Selected</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+
+               <button type="submit" id="submitButton">
+    Add Application
+</button>
+            </form>
+
+        </section>
+
+
+        <!-- Search & Filter -->
+        <section class="filters">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search company or role..."
+            >
+
+            <select id="filterStatus">
+
+                <option value="All">All Status</option>
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Selected">Selected</option>
+                <option value="Rejected">Rejected</option>
+
+            </select>
+
+        </section>
+
+
+        <!-- Applications -->
+        <section class="applications">
+
+            <h2>My Applications</h2>
+
+            <div id="applicationList">
+
+                <p class="empty-message">
+                    No applications added yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="JobTrack.js"></script>
+
+</body>
+</html>

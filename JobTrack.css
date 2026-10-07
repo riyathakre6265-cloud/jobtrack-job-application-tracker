@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Header */
+.header {
+    background: #111827;
+    color: white;
+    padding: 35px 0;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #d1d5db;
+    font-size: 16px;
+}
+
+/* Dashboard */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #111827;
+}
+
+/* Form */
+.application-form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.application-form h2,
+.applications h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #111827;
+}
+
+button {
+    grid-column: span 2;
+    padding: 13px;
+    background: #111827;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #374151;
+}
+
+/* Filters */
+.filters {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* Applications */
+.applications {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.empty-message {
+    text-align: center;
+    color: #6b7280;
+    padding: 30px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    .dashboard {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        grid-column: span 1;
+    }
+
+    .filters {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .container {
+        width: 92%;
+    }
+}
+/* Application Card */
+
+.application-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #fafafa;
+}
+
+.application-item h3 {
+    margin-bottom: 6px;
+    color: #111827;
+}
+
+.application-item p {
+    margin-bottom: 6px;
+    color: #4b5563;
+}
+
+.application-item small {
+    color: #6b7280;
+}
+
+.application-item strong {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #e5e7eb;
+    color: #111827;
+    font-size: 13px;
+}
+
+.application-item button {
+    padding: 8px 14px;
+    background: #dc2626;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.application-item button:hover {
+    background: #b91c1c;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .application-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .application-item button {
+        width: auto;
+    }
+}
+/* Status Badges */
+
+.status-badge {
+    display: inline-block;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Applied */
+.status-applied {
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+/* Interview */
+.status-interview {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* Selected */
+.status-selected {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* Rejected */
+.status-rejected {
+    background: #fee2e2;
+    color: #991b1b;
+}
+/* Success Progress Bar */
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+#successProgress {
+    width: 0%;
+    height: 100%;
+    background: #16a34a;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
